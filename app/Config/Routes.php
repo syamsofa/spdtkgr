@@ -7,3 +7,5 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->resource('sampel');
+$routes->resource('art');
+$routes->resource('makanan');
