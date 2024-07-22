@@ -27,6 +27,17 @@ class Sampel extends ResourceController
             return $this->failNotFound('Data tidak ditemukan.');
         }
     }
+    // single user
+    public function show_by_status($status = null)
+    {
+        $model = new SampelModel();
+        $data = $model->where('Status', $status)->first();
+        if ($data) {
+            return $this->respond($data);
+        } else {
+            return $this->failNotFound('Data tidak ditemukan.');
+        }
+    }
     // create
     public function create()
     {
