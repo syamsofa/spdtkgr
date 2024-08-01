@@ -14,4 +14,9 @@ class Home extends BaseController
         $this->arr['judul']="DAFTAR SAMPEL";
         return view('utama', $this->arr);
     }
+    public function kuesioner(): string
+    {
+        $this->arr['judul']="KUESIONER";
+        return view('kuesioner');
+    }
 }

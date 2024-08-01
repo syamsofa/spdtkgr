@@ -7,6 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/daftar_sampel', 'Home::daftar_sampel');
+$routes->get('/kuesioner', 'Home::kuesioner');
 // $routes->resource('sampel');
 $routes->get('sampel',                 'Sampel::index');
 $routes->get('sampel/(:segment)',      'Sampel::show/$1');
