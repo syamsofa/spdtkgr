@@ -69,38 +69,87 @@
         </div>
     </div>
     <div class="row">
+        <div class="row ">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr class="bg-blok text-dark text-center">
+                        <th colspan="4">
+                            <h5>BLOK I. PENGENALAN TEMPAT</h5>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td width="60px">1</td>
+                        <td class="text-left">Provinsi</td>
+                        <td class="col-4 text-left">JAWA TENGAH</td>
+                        <td class="col-4 p-2"><input type="text" disabled="disabled" class="field-right form-control form-control-sm rounded-0" fdprocessedid="0sxfs"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="text-left">Kabupaten/Kota *)</td>
+                        <td class="text-left">BLORA</td>
+                        <td class="p-2"><input type="text" disabled="disabled" class="field-right form-control form-control-sm rounded-0" fdprocessedid="edp4u8"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="text-left">Kecamatan</td>
+                        <td class="text-left">KRADENAN</td>
+                        <td class="p-2"><input type="text" disabled="disabled" class="field-right form-control form-control-sm rounded-0" fdprocessedid="ovtngj"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="text-left">Desa/Kelurahan *)</td>
+                        <td class="text-left">NGRAWOH</td>
+                        <td class="p-2"><input type="text" disabled="disabled" class="field-right form-control form-control-sm rounded-0" fdprocessedid="cfwnr7"></td>
+                    </tr>
 
-        <div class="container">
 
-            <div class="row text-center p-3 mb-2 bg-secondary text-white">
-                I. PENGENALAN TEMPAT
-            </div>
+                    <tr>
+                        <td>5</td>
+                        <td class="text-left">Nomor Urut Sampel Rumah Tangga</td>
+                        <td class="text-left">01</td>
+                        <td class="p-2"><input type="text" disabled="disabled" class="field-right form-control form-control-sm rounded-0" fdprocessedid="yeqta5"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="text-left">Nama Pemilik/Pengelola Usaha</td>
+                        <td colspan="2" class="p-2"><input type="text" maxlength="50" disabled="disabled" class="field-left text-uppercase form-control form-control-sm rounded-0" fdprocessedid="cyok4"></td>
+                    </tr>
 
-            <div class="row">
-                <div class="col-sm border border-secondary">
-                1. Provinsi 
-                </div>
-                <div class="col-sm border border-secondary">
-                    One of three columns
-                </div>
-                <div class="col-sm border border-secondary">
-                <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
-                </div>
-            </div>
-            <div class="row  ">
-                <div class="col-sm border border-secondary">
-                2. Kabupaten
-                </div>
-                <div class="col-sm border border-secondary">
-                    One of three columns
-                </div>
-                <div class="col-sm border border-secondary">
-                    One of three columns
-                </div>
-            </div>
-
+                </tbody>
+            </table>
         </div>
 
-
     </div>
-</div>
+
+    <div class="row">
+        <div class="row ">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr class="bg-blok text-dark text-center">
+                        <th colspan="4">
+                            <h5>BLOK VI. CATATAN</h5>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea class="field-right form-control form-control-sm rounded-0" id="txt_catatan"></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        var base_url = 'http://localhost:8080'
+        var Id=1
+    </script>
+    <script>
+        $.get(base_url + "/sampel/" + Id, {
+
+            },
+            function(data, status) {
+                // alert("Data: " + data + "\nStatus: " + status);
+                $("#txt_catatan").text(data.Catatan)
+            });
+    </script>
