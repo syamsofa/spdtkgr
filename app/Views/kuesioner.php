@@ -120,6 +120,25 @@
         </div>
 
     </div>
+    <div class="row">
+        <div class="row ">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr class="bg-blok text-dark text-center">
+                        <th colspan="4">
+                            <h5>BLOK V. RINGKASAN PENGELUARAN BAHAN MAKANAN</h5>
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <td width="col-6">Jenis Barang</td>
+                        <td class="col-3 text-left">JAWA TENGAH</td>
+                        <td class="col-3 p-2"><input type="text" disabled="disabled" class="field-right form-control form-control-sm rounded-0" fdprocessedid="0sxfs"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
     <div class="row">
         <div class="row ">
